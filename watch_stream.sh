@@ -15,7 +15,7 @@ do
 
 	ffmpeg -y -f concat -safe 0 -i list.txt -c copy joined-out.flv && rm list.txt
 
-	if [ $loops -gt 0 ]
+	if [ $loops -e 0 ]
 	do
 		vlc joined-out.flv
 	done
